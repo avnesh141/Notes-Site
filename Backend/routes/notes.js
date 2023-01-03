@@ -33,7 +33,7 @@ router.post("/createnotes",fetchuser, body("title", "title must not be too small
   }
 
   try {
-   
+    console.log("You are inside CreateNotes");
    let user = await Note.create({
       user:req.user.id,
       title: req.body.title,
@@ -49,6 +49,7 @@ router.post("/createnotes",fetchuser, body("title", "title must not be too small
 
 router.put("/update/:id",fetchuser, async (req, res) => {
   const { tag, title, description } = req.body;
+  console.log("you are inside edit")
   try {
     let newNote = {};
     if (tag) {
@@ -61,15 +62,18 @@ router.put("/update/:id",fetchuser, async (req, res) => {
       newNote.description = description;
     }
     console.log(req.params.id);
-    let note = await Note.findOne({id:req.params.id});
+    let note = await Note.findOne({_id:req.params.id});
     console.log(note);
     if (!note)
     {
       return res.status(401).send({ error: "Not Found" });
     }
+    console.log(note.user.toString());
+    console.log(note);
+    console.log(req.user.id);
     if (note.user.toString() !== req.user.id)
     {
-     return  res.status(401).send("NOT ALLOWED");
+     return  res.status(401).send("Not Allowed to do this");
     }
     note = await Note.findByIdAndUpdate(req.params.id, { $set: newNote }, { new: true });
     res.send({ note });
@@ -85,14 +89,16 @@ router.put("/update/:id",fetchuser, async (req, res) => {
 router.delete("/delete/:id",fetchuser, async (req, res) => {
   const { tag, title, description } = req.body;
   try {
-    let note = await Note.findOne({id:req.params.id});
+    let note = await Note.findOne({_id:req.params.id});
     if (!note)
     {
       return res.status(401).send({ error: "Not Found" });
     }
+    console.log(note.user.toString());
+    console.log(req.user.id);
     if (note.user.toString() !== req.user.id)
     {
-     return  res.status(401).send("NOT ALLOWED");
+     return  res.status(401).send("Not allowed to do this");
     }
     note = await Note.findByIdAndDelete(req.params.id);
     res.send({message:"Note Deleted successfully"});

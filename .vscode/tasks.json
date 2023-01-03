@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "both",
+			"problemMatcher": [],
+			"label": "npm: both",
+			"detail": "concurrently \"npm run start\"  \"nodemon backend/index.js\""
+		}
+	]
+}
