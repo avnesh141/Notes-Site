@@ -15,7 +15,7 @@ const NoteItem = (props) => {
   }
     return (
       <div className="card mx-2 my-3">
-        <div className=" my-3 mx-2" style={{ width: "18rem",height:'auto'}}>
+        <div className=" my-3 mx-2 ">
           <div className="card-body">
             <h5 className="card-title">{note.title}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{note.tag}</h6>

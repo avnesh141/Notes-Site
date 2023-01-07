@@ -1,5 +1,6 @@
 .card{
     display: inline-block;
+    background-color: #e8e8e8;
 }
 i{
     cursor: pointer;

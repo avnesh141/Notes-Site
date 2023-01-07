@@ -1,0 +1,11 @@
+@font-face {
+   font-family: LobsterTwo-Bold;
+   src: url(LobsterTwo-Bold.ttf);
+}
+
+
+.App{
+    font-family:'LobsterTwo-Bold';
+    /* color: rgb(7, 99, 122); */
+    
+}

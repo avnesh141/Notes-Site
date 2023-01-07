@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import alertcontext from "../../Contexts/Alert/AlertContext";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import './Login.css'
 
 const Login = () => {
 
@@ -30,36 +31,43 @@ const Login = () => {
     }
     else
     {
-      setalert("warning", "Login Failed");
+      setalert("Warning", "Login Failed");
       }
   };
 
   return (
-    <div>
-      <div className="my-3" >
+    <div className="text-center" style={{position:"relative",top:"60px"}}>
+      <div className="my-8 text-center" style={{ display: "inline-block" }}>
         <h2 className="my-3">Login to Continue to Notes App</h2>
         <label htmlFor="exampleFormControlInput1" className="form-label mt-3">
-          Email address
+          <h5>Email address</h5>
         </label>
         <input
           type="email"
           name="email"
-          className="form-control my-2"
+          className="form-control my-2 input"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
           onChange={onchange}
         />
-        <label htmlFor="inputPassword2"className="mt-3">Password</label>
+        <label htmlFor="inputPassword2" className="mt-3">
+          <h5>Password</h5>
+        </label>
         <input
           type="password"
           name="password"
-          className="form-control my-2"
+          className="form-control my-2 input"
           id="inputPassword2"
           placeholder="Password"
           onChange={onchange}
         />
         <div className="my-3">
-          <input className="btn btn-primary" type="submit" value="Login" onClick={clickhandler}/>
+          <input
+            className="buttonL"
+            type="submit"
+            value="Login"
+            onClick={clickhandler}
+          />
         </div>
       </div>
     </div>

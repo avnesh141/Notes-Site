@@ -37,7 +37,7 @@ router.post("/createnotes",fetchuser, body("title", "title must not be too small
    let user = await Note.create({
       user:req.user.id,
       title: req.body.title,
-      tag: req.body.tag,
+      tag: req.body.tag?req.body.tag:"General",
       description: req.body.description,
     });
     res.send(user);
@@ -54,7 +54,8 @@ router.put("/update/:id",fetchuser, async (req, res) => {
     let newNote = {};
     if (tag) {
       newNote.tag = tag;
-        }
+    }
+    
     if (title) {
       newNote.title = title;
     }

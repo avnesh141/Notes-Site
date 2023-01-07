@@ -41,7 +41,7 @@ const Notes = () => {
     setalert("success", "Note Updated Succefully");
   }
   return (
-    <>
+    <div style={{ position: "relative", top: "70px" }}>
       <AddNote />
       <button
         style={{ display: "none" }}
@@ -85,7 +85,7 @@ const Notes = () => {
                   type="name"
                   name="title"
                   value={note.title}
-                  className="form-control"
+                  className="form-control inputN"
                   id="exampleFormControlInput1"
                   placeholder="Meeting"
                   onChange={onchange}
@@ -102,7 +102,7 @@ const Notes = () => {
                   name="tag"
                   type="name"
                   value={note.tag}
-                  className="form-control"
+                  className="form-control inputN"
                   id="exampleFormControlInput2"
                   placeholder="Web"
                   onChange={onchange}
@@ -119,7 +119,7 @@ const Notes = () => {
                   name="description"
                   type="text"
                   value={note.description}
-                  className="form-control"
+                  className="form-control inputN"
                   id="exampleFormControlTextarea1"
                   rows="3"
                   placeholder="You have a Meeting related to web"
@@ -135,7 +135,7 @@ const Notes = () => {
                 type="button"
                 className="btn btn-primary"
                 onClick={clicksave}
-                disabled={note.description.length<5 ||note.title.length<5}
+                disabled={note.description.length < 5 || note.title.length < 5}
               >
                 Save changes
               </button>
@@ -144,21 +144,19 @@ const Notes = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container text-center ">
         <h1>Your Notes</h1>
-        <div className="my-3 ">
+        <div className="my-3">
           {notes.length ? (
             notes.map((note, id) => {
               return <NoteItem key={id} note={note} updateNote={updateNote} />;
             })
           ) : (
-            <h4>
-             You do not have Any Notes.
-            </h4>
+            <h4>You do not have Any Notes.</h4>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

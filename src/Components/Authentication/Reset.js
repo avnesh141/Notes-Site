@@ -35,34 +35,37 @@ const Reset = () => {
     }
   };
   return (
-    <div>
+    <div style={{display:"inline-block",width:"60%",position:"relative",top:"70px"}}>
+      <h1>Raset Password</h1>
       <form >
-        <div class="form-group">
+        <div className="form-group text-center">
           <label for="exampleInputPassword1" className="mt-3">
             Password
           </label>
           <input
             type="password"
-            className="form-control mt-3"
+            className="form-control mt-3 inputN"
             name="password"
             id="exampleInputPassword1"
             placeholder="Password"
             onChange={onchange}
+            style={{margin:"auto"}}
           />
           <label for="exampleInputPassword1" className="mt-3">
             Confirm Password
           </label>
           <input
             type="password"
-            className="form-control mt-3"
+            className="form-control mt-3 inputN"
             name="confirmpassword"
             id="exampleInputPassword2"
             placeholder="Confirm Password"
             onChange={onchange}
+            style={{margin:"auto"}}
           />
         </div>
         <div className="text-center">
-          <Link type="submit" className="btn btn-primary mt-3" onClick={Submithandler}>
+          <Link type="submit" className="buttonAdd mt-3" style={{textDecoration:"none"}} onClick={Submithandler}>
             Reset
           </Link>
         </div>

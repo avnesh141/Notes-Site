@@ -23,7 +23,7 @@ function App() {
         <Router>
           <Navbar />
           <Alert alert={alert} />
-          <div className="container">
+          <div className="container text-center">
             <Routes>
               <Route exact path="/" element={<Home/>} />
                 <Route exact path="/about" element={<About />} />

@@ -34,36 +34,50 @@ const Profile = () => {
 
   return (
     <>
-      {data && <div className="text-center">
-        <div className="container mt-3">
-      <h3 className="text-center">Profile Details</h3>
-      <table className="table table-success table-striped mt-5 text-center">
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>{data.name}</td>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td>{data.email}</td>
-          </tr>
-          <tr>
-            <td>id</td>
-            <td>{data._id}</td>
-          </tr>
-          <tr>
-            <td>Registered On</td>
-            <td>{data.date}</td>
-          </tr>
-          <tr></tr>
-        </tbody>
-      </table>
-      </div>
-      <Link type="button" className="btn btn-primary" to="/reset">
-          Change Password
-      </Link>
-      </div>
-      }
+      {data && (
+        <div
+          className="text-center"
+          style={{
+            display: "inline-block",
+            width: "60%",
+            position: "relative",
+            top: "70px",
+          }}
+        >
+          <div className="container mt-3">
+            <h3 className="text-center">Profile Details</h3>
+            <table className="table table-success table-striped mt-5 text-center">
+              <tbody>
+                <tr style={{ borderRadius: "20px" }}>
+                  <td>Name</td>
+                  <td>{data.name}</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>{data.email}</td>
+                </tr>
+                <tr>
+                  <td>id</td>
+                  <td>{data._id}</td>
+                </tr>
+                <tr>
+                  <td>Registered On</td>
+                  <td>{data.date}</td>
+                </tr>
+                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+          <Link
+            type="button"
+            className="buttonAdd"
+            style={{ textDecoration: "none" }}
+            to="/reset"
+          >
+            Change Password
+          </Link>
+        </div>
+      )}
     </>
   );
 };

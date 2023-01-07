@@ -5,7 +5,9 @@ function Home() {
 
   return (
     <>
+      <div class="home">
           <Notes/>
+      </div>
     </>
   );
 }

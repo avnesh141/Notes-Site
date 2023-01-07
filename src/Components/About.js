@@ -2,11 +2,14 @@ import React from "react";
 import "./About.css";
 function About() {
   return (
-    <div>
+    <div
+      className="container-main text-center"
+      style={{ display: "inline-block",position:"relative", margin: "auto", width: "60%",top:"70px" }}
+    >
       <h1>About Us</h1>
       <div className="about">
         <div className="accordion ">
-          <div className="accordion-item">
+          <div className="accordion-item" >
             <h2 className="accordion-header" id="headingOne">
               <button
                 className="accordion-button"
@@ -26,8 +29,9 @@ function About() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                If you want to use this site please register yourself.If you are already registered  on our site then please login first.
-                you will not able to go to home page without login.
+                If you want to use this site please register yourself.If you are
+                already registered on our site then please login first. you will
+                not able to go to home page without login.
               </div>
             </div>
           </div>
