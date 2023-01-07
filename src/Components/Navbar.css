@@ -91,6 +91,16 @@
 }
 
 
+
+@media (max-width:991px)
+{
+  .navbar-collapse{
+    display: flex;
+  flex-direction: column;
+}
+}
+
+
 .sticky{
     position: fixed;
 top: 0;

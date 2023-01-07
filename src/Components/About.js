@@ -4,7 +4,7 @@ function About() {
   return (
     <div
       className="container-main text-center"
-      style={{ display: "inline-block",position:"relative", margin: "auto", width: "60%",top:"70px" }}
+      style={{ display: "inline-block",position:"relative",width:"100%", margin: "auto",top:"70px" }}
     >
       <h1>About Us</h1>
       <div className="about">

@@ -75,7 +75,7 @@ function Navbar() {
             )}
             <div className="loginbutton">
               {!localStorage.getItem("token") ? (
-                <form>
+                <form style={{display:"flex"}}>
                   <Link
                     className="buttonn mx-3"
                     to="/login"

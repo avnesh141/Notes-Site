@@ -38,8 +38,8 @@ const Register = () => {
   return (
     <div className="text-center" style={{ position: "relative", top: "60px" }}>
       <div
-        className="my-3 text-center"
-        style={{ display: "inline-block", width: "50%" }}
+        className="my-3 text-center inputBoxes"
+        
       >
         <label htmlFor="exampleFormControlInput1" className="form-label">
           <h5>Name</h5>

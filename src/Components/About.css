@@ -1,0 +1,11 @@
+
+.about{
+    margin:auto;
+    width: 60%;
+}
+
+@media (max-width:600px){
+    .about{
+        width:90%;
+    }
+}

@@ -15,8 +15,17 @@
  place-content: "Enter your message!";
 }
 
+.inputBoxes{
+    display: inline-block;
+    width: 60%;
+}
 
-
+@media (max-width:600px)
+{
+    .inputBoxes{
+    width: 90%;
+    }
+}
 
 .buttonR {
  background-color: #444141;
