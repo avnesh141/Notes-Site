@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const mongoURI =
-  "mongodb + srv://vercel-admin-user:8twwsrTodZjdCrJP@cluster0.hbvar0z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://vercel-admin-user:8twwsrTodZjdCrJP@cluster0.hbvar0z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const connetparams = {
   useNewUrlParser: true,
   useUnifiedTopology:true

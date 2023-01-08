@@ -26,6 +26,7 @@ const Register = () => {
       body: JSON.stringify(credential),
     });
     const json = await response.json();
+    console.log(json);
     if (json.success) {
       localStorage.setItem("token", json.authtoken);
       console.log(json);

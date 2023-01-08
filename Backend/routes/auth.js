@@ -17,6 +17,7 @@ router.post(
   body("password", "must be 5 characters long").isLength({ min: 5 }),
   async (req, res) => {
     const errors = validationResult(req);
+    console.log("You are here");
     if (!errors.isEmpty()) {
       console.log("first");
       return res.status(400).json({ errors: "errors.array()" });
