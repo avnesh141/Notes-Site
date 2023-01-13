@@ -14,7 +14,7 @@ import Reset from './Components/Authentication/Reset'
 
 
 function App() {
-  
+  console.log(process.env.REACT_APP_KEY);
   return (
     <>
       <NoteState>

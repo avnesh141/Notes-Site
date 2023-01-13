@@ -37,7 +37,7 @@ const Register = () => {
     }
   };
   return (
-    <div className="text-center" style={{ position: "relative", top: "60px" }}>
+    <div className="text-center" style={{ position: "relative", top: "110px" }}>
       <div
         className="my-3 text-center inputBoxes"
         

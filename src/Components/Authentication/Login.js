@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="text-center" style={{position:"relative",top:"60px"}}>
+    <div className="text-center" style={{position:"relative",top:"110px"}}>
       <div className="my-8 text-center" style={{ display: "inline-block" }}>
         <h2 className="my-3">Login to Continue to Notes App</h2>
         <label htmlFor="exampleFormControlInput1" className="form-label mt-3">

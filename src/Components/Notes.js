@@ -41,7 +41,7 @@ const Notes = () => {
     setalert("success", "Note Updated Succefully");
   }
   return (
-    <div style={{ position: "relative", top: "70px" }}>
+    <div style={{ position: "relative", top: "110px" }}>
       <AddNote />
       <button
         style={{ display: "none" }}

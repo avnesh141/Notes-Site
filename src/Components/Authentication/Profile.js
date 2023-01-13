@@ -28,7 +28,7 @@ const Profile = () => {
   };
   useEffect(() => {
     details();
-  }, [])
+  }, [data])
   
 
 
@@ -41,7 +41,7 @@ const Profile = () => {
             display: "inline-block",
             width: "60%",
             position: "relative",
-            top: "70px",
+            top: "110px",
           }}
         >
           <div className="container mt-3">

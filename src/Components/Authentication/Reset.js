@@ -27,6 +27,7 @@ const Reset = () => {
         body: JSON.stringify(Credentials),
       });
         const json = await response.json();
+      console.log(json);
         setalert("SUCCESS", "Password Updated SuccessFully  Login Again to continue");
         // localStorage.removeItem('token');
         navigate('/profile');
@@ -35,8 +36,8 @@ const Reset = () => {
     }
   };
   return (
-    <div style={{display:"inline-block",width:"60%",position:"relative",top:"70px"}}>
-      <h1>Raset Password</h1>
+    <div style={{display:"inline-block",width:"60%",position:"relative",top:"110px"}}>
+      <h1>Reset Password</h1>
       <form >
         <div className="form-group text-center">
           <label for="exampleInputPassword1" className="mt-3">

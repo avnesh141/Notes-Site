@@ -1,10 +1,16 @@
 const mongoose = require('mongoose');
-const mongoURI =
-  "mongodb+srv://vercel-admin-user:8twwsrTodZjdCrJP@cluster0.hbvar0z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+require("dotenv").config({ path: require("find-config")(".env") });
+const uri = process.env.MONGODB_URI;
+
+
+const mongoURI =uri;
 const connetparams = {
   useNewUrlParser: true,
   useUnifiedTopology:true
   }
+
+
 
 mongoose.set('strictQuery', 'true');
 const connectTomongo = () => {

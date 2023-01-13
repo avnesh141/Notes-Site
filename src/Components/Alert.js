@@ -6,7 +6,7 @@ const Alert = () => {
   const { alert } = context;
        return (
          <div
-           style={{ height: "50px", position: "relative", textAlign: "center",top:"60px" }}
+           style={{ height: "50px", position: "absolute",width:"100%", textAlign: "center",top:"60px" }}
          >
            {alert && (
              <div
