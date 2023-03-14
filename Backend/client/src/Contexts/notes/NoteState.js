@@ -1,10 +1,12 @@
 import NoteContext from "./NotesContexts";
 import { useState } from "react";
 const NoteState = (props) => {
+
+  const host = process.env.REACT_APP_KEY;
   const initialNotes = [];
   const [notes, setNotes] = useState(initialNotes);
   const getNotes = async () => {
-    const response = await fetch("http://localhost:5000/api/notes/fetch", {
+    const response = await fetch(`/api/notes/fetch`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -13,10 +15,11 @@ const NoteState = (props) => {
     });
     const json = await response.json();
     setNotes(json);
+    console.log(response);
   };
   const Addnote = async (note) => {
     const response = await fetch(
-      "http://localhost:5000/api/notes/createnotes",
+      `/api/notes/createnotes`,
       {
         method: "POST",
         headers: {
@@ -30,7 +33,7 @@ const NoteState = (props) => {
   };
   const EditNote = async (id, note) => {
     const response = await fetch(
-      `http://localhost:5000/api/notes/update/${id}`,
+      `/api/notes/update/${id}`,
       {
         method: "PUT",
         headers: {
@@ -43,16 +46,13 @@ const NoteState = (props) => {
     console.log(response);
   };
   const deleteNote = async (id) => {
-    const response = await fetch(
-      `http://localhost:5000/api/notes/delete/${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "auth-token": localStorage.getItem("token"),
-        },
-      }
-    );
+    const response = await fetch(`/api/notes/delete/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
+    });
     console.log(response);
   };
 

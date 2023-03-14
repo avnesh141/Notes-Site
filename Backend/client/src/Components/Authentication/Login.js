@@ -5,6 +5,9 @@ import './Login.css'
 
 const Login = () => {
 
+
+  const host = process.env.REACT_APP_KEY;
+
   const alcontext = useContext(alertcontext);
   const { setalert } = alcontext;
 
@@ -14,8 +17,8 @@ const Login = () => {
   const onchange = (e) => {
     setcredential({ ...credential, [e.target.name]: e.target.value });
   };
-  const clickhandler = async() => {
-    const response = await fetch(`http://localhost:5000/api/auth/login`, {
+  const clickhandler = async () => {
+    const response = await fetch(`/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

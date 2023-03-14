@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const Profile = () => {
 
   const [data, setData] = useState(null);
-
+  const host = process.env.REACT_APP_KEY;
   const details = async () => {
 
 
     if (localStorage.getItem("token")) {
       const response = await fetch(
-        `http://localhost:5000/api/auth/getuser`,
+        `/api/auth/getuser`,
         {
           method: "POST",
           headers: {

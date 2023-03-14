@@ -8,6 +8,7 @@ const Reset = () => {
   const { setalert } = alcontext;
     const navigate = useNavigate();
     
+const host = process.env.REACT_APP_KEY;  
   const [Credentials, setCredentials] = useState({
     password: "",
     confirmpassword: "",
@@ -18,7 +19,7 @@ const Reset = () => {
 
   const Submithandler = async () => {
     if (Credentials.password === Credentials.confirmpassword) {
-      const response = await fetch(`http://localhost:5000/api/auth/reset`, {
+      const response = await fetch(`/api/auth/reset`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

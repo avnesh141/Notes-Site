@@ -9,7 +9,7 @@ app.use(express.json());
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 console.log(port)
 // const mongoURI ="mongodb://avnesh:Ak2566@ac-rses7d7-shard-00-00.hbvar0z.mongodb.net:27017,ac-rses7d7-shard-00-01.hbvar0z.mongodb.net:27017,ac-rses7d7-shard-00-02.hbvar0z.mongodb.net:27017/?ssl=true&replicaSet=atlas-10g058-shard-0&authSource=admin&retryWrites=true&w=majority"
 const connetparams = {

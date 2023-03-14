@@ -7,6 +7,7 @@ const Register = () => {
   const alcontext = useContext(alertcontext);
   const { setalert } = alcontext;
 
+const host = process.env.REACT_APP_KEY;
   const navigate = useNavigate();
 
   const [credential, setcredential] = useState({
@@ -18,7 +19,7 @@ const Register = () => {
     setcredential({ ...credential, [e.target.name]: e.target.value });
   };
   const clickhandler = async () => {
-    const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
+    const response = await fetch(`/api/auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
